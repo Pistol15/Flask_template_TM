@@ -14,31 +14,35 @@ def register():
     if request.method == 'POST':
 
         # On récupère les champs 'username' et 'password' de la requête HTTP
-        username = request.form['username']
-        password = request.form['password']
+        adresse_mail = request.form['adresse_mail']
+        Mot_de_passe = request.form['Mot_de_passe']
+        Nom = request.form['Nom']
+        Prenom = request.form['Prenom']
+        date_de_naisssance = request.form['date_de_naisssance']
+        no_de_telephone = request.form['no_de_telephone']
 
         # On récupère la base de donnée
         db = get_db()
 
         # Si le nom d'utilisateur et le mot de passe ont bien une valeur
         # on essaie d'insérer l'utilisateur dans la base de données
-        if username and password:
+        if adresse_mail and Mot_de_passe and Nom and Prenom and date_de_naisssance and no_de_telephone:
             try:
-                db.execute("INSERT INTO users (username, password) VALUES (?, ?)",(username, generate_password_hash(password)))
+                db.execute("INSERT INTO Personne (adresse_mail, Mot_de_passe, Nom, Prenom, date_de_naissance, no_de_telephone) VALUES (?, ?, ?, ?, ?, ?)",(adresse_mail, generate_password_hash(Mot_de_passe), Nom, Prenom, date_de_naisssance, no_de_telephone))
                 # db.commit() permet de valider une modification de la base de données
                 db.commit()
             except db.IntegrityError:
 
                 # La fonction flash dans Flask est utilisée pour stocker un message dans la session de l'utilisateur
                 # dans le but de l'afficher ultérieurement, généralement sur la page suivante après une redirection
-                error = f"User {username} is already registered."
+                error = f"User {adresse_mail} is already registered."
                 flash(error)
                 return redirect(url_for("auth.register"))
             
             return redirect(url_for("auth.login"))
          
         else:
-            error = "Username or password invalid"
+            error = "adresse_mail or Mot_de_passe invalid"
             flash(error)
             return redirect(url_for("auth.login"))
     else:
@@ -52,29 +56,29 @@ def login():
     if request.method == 'POST':
 
         # On récupère les champs 'username' et 'password' de la requête HTTP
-        username = request.form['username']
-        password = request.form['password']
+        adresse_mail = request.form['adresse_mail']
+        Mot_de_passe = request.form['Mot_de_passe']
 
         # On récupère la base de données
         db = get_db()
         
         # On récupère l'utilisateur avec le username spécifié (une contrainte dans la db indique que le nom d'utilisateur est unique)
         # La virgule après username est utilisée pour créer un tuple contenant une valeur unique
-        user = db.execute('SELECT * FROM users WHERE username = ?', (username,)).fetchone()
+        Personne = db.execute('SELECT * FROM Personne WHERE adresse_mail = ?', (adresse_mail,)).fetchone()
 
         # Si aucun utilisateur n'est trouve ou si le mot de passe est incorrect
         # on crée une variable error 
         error = None
-        if user is None:
-            error = 'Incorrect username.'
-        elif not check_password_hash(user['password'], password):
-            error = 'Incorrect password.'
+        if Personne is None:
+            error = 'Incorrect adresse_mail.'
+        elif not check_password_hash(Personne['Mot_de_passe'], Mot_de_passe):
+            error = 'Incorrect Mot_de_passe.'
 
         # S'il n'y pas d'erreur, on ajoute l'id de l'utilisateur dans une variable de session
         # De cette manière, à chaque requête de l'utilisateur, on pourra récupérer l'id dans le cookie session
         if error is None:
             session.clear()
-            session['user_id'] = user['id']
+            session['Personne_ID'] = Personne['Personne_ID']
             # On redirige l'utilisateur vers la page principale une fois qu'il s'est connecté
             return redirect("/")
         
@@ -101,19 +105,19 @@ def logout():
 def load_logged_in_user():
 
     # On récupère l'id de l'utilisateur stocké dans le cookie session
-    user_id = session.get('user_id')
+    Personne_ID = session.get('Personne_ID')
 
     # Si l'id de l'utilisateur dans le cookie session est nul, cela signifie que l'utilisateur n'est pas connecté
     # On met donc l'attribut 'user' de l'objet 'g' à None
-    if user_id is None:
-        g.user = None
+    if Personne_ID is None:
+        g.Personne = None
 
     # Si l'id de l'utilisateur dans le cookie session n'est pas nul, on récupère l'utilisateur correspondant et on stocke
     # l'utilisateur comme un attribut de l'objet 'g'
     else:
          # On récupère la base de données et on récupère l'utilisateur correspondant à l'id stocké dans le cookie session
         db = get_db()
-        g.user = db.execute('SELECT * FROM users WHERE id = ?', (user_id,)).fetchone()
+        g.Personne = db.execute('SELECT * FROM Personne WHERE Personne_ID = ?', (Personne_ID,)).fetchone()
 
 
 

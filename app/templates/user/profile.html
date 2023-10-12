@@ -6,8 +6,12 @@
 
 {% block content %}
     <ul>
-        <li>Username: {{g.user.username}}</li>
-        <li>Password: {{g.user.password}}</li>
+        <li>adresse_mail: {{g.Personne.adresse_mail}}</li>
+        <li>Mot_de_passe: {{g.Personne.Mot_de_passe}}</li>
+        <li>Nom: {{g.Personne.Nom}}</li>
+        <li>Prenom: {{g.Personne.Prenom}}</li>
+        <li>date_de_naissance: {{g.Personne.date_de_naissance}}</li>
+        <li>no_de_telephone: {{g.Personne.no_de_telephone}}</li>
     </ul>
     
 {% endblock %}
