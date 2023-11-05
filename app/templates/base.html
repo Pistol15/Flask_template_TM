@@ -1,23 +1,10 @@
 <!doctype html>
 <head>
-    <title>{% block title %}{% endblock %} - Template de base Flask</title>
+    <title>Monney Photography</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
-    <nav>
-        <h1>Template de base Flask</h1>
-        <ul>
-        {% if g.Personne %}
-            <li><span>{{ g.Personne['adresse_mail'] }}</span>
-            <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
-            <li><a href="{{url_for('user.show_profile')}}">Show profile</a></li>
-        {% else %}
-            <li><a href="{{ url_for('auth.register') }}">Register</a>
-            <li><a href="{{ url_for('auth.login') }}">Log In</a>
-        {% endif %}
-        </ul>
-    </nav>
 
     <section class="content">
         <header>

@@ -18,17 +18,19 @@ def register():
         Mot_de_passe = request.form['Mot_de_passe']
         Nom = request.form['Nom']
         Prenom = request.form['Prenom']
-        date_de_naisssance = request.form['date_de_naisssance']
+        date_de_naissance = request.form['date_de_naissance']
         no_de_telephone = request.form['no_de_telephone']
+        Personne_ID = 0
+        Personne_ID +=1
 
         # On récupère la base de donnée
         db = get_db()
 
         # Si le nom d'utilisateur et le mot de passe ont bien une valeur
         # on essaie d'insérer l'utilisateur dans la base de données
-        if adresse_mail and Mot_de_passe and Nom and Prenom and date_de_naisssance and no_de_telephone:
+        if adresse_mail and Mot_de_passe and Nom and Prenom and date_de_naissance and no_de_telephone:
             try:
-                db.execute("INSERT INTO Personne (adresse_mail, Mot_de_passe, Nom, Prenom, date_de_naissance, no_de_telephone) VALUES (?, ?, ?, ?, ?, ?)",(adresse_mail, generate_password_hash(Mot_de_passe), Nom, Prenom, date_de_naisssance, no_de_telephone))
+                db.execute("INSERT INTO Personne (Personne_ID, adresse_mail, Mot_de_passe, Nom, Prenom, date_de_naissance, no_de_telephone) VALUES (?, ?, ?, ?, ?, ?, ?)",(Personne_ID , adresse_mail, generate_password_hash(Mot_de_passe), Nom, Prenom, date_de_naissance, no_de_telephone))
                 # db.commit() permet de valider une modification de la base de données
                 db.commit()
             except db.IntegrityError:
