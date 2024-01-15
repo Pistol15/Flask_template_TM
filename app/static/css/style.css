@@ -68,3 +68,41 @@ width: 100%;
 height: 225px;
 margin-top: 108px;
 }
+
+.adresse_mail{
+    color: white;
+}
+.mdp{
+    color: white;
+}
+
+.nom{
+    color: white;
+}
+
+.prenom{
+    color: white;
+}
+
+.date_de_naissance{
+    color: white;
+}
+
+.no_de_tel{
+    color: white;
+}
+
+.fi5{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: none;
+}
+
+.fi5:hover
+.fi5:active{
+    background-color: black;
+    color: white;
+}

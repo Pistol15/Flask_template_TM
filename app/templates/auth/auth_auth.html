@@ -1,5 +1,6 @@
+{% extends 'base.html' %}
+{% block content%}
 <nav>
-    <h1>Template de base Flask</h1>
     <ul>
     {% if g.Personne %}
         <li><span>{{ g.Personne['adresse_mail'] }}</span>
@@ -11,3 +12,4 @@
     {% endif %}
     </ul>
 </nav>
+{% endblock %}
