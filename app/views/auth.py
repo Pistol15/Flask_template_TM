@@ -6,9 +6,9 @@ import os
 # Création d'un blueprint contenant les routes ayant le préfixe /auth/...
 auth_bp = Blueprint('auth', __name__, url_prefix='/auth')
 
-@auth_bp.route('/auth_auth', methods=('GET', 'POST'))
-def auth_auth():
-    return render_template("auth/auth_auth.html")
+@auth_bp.route('/auth', methods=('GET', 'POST'))
+def auth():
+    return render_template("auth/auth.html")
 
 # Route /auth/register
 @auth_bp.route('/register', methods=('GET', 'POST'))

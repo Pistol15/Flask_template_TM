@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content%}
+<nav>
+    <ul>
+    {% if g.Personne %}
+        <li><span>{{ g.Personne['adresse_mail'] }}</span>
+        <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
+        <li><a href="{{url_for('user.show_profile')}}">Show profile</a></li>
+    {% else %}
+            <h1 class="login">Se connecter </h1>
+            <form method="post">
+            <div class="adresse_mail"><label for="adresse_mail">adresse_mail</label></div>
+            <input name="adresse_mail" id="adresse_mail" required>
+            <div class="mdp"><label for="Mot_de_passe">Mot_de_passe</label></div>
+            <input type="Mot_de_passe" name="Mot_de_passe" id="Mot_de_passe" required>
+            <input type="submit" value="Log In">
+            </form>
+        <li><a href="{{ url_for('auth.register') }}">Register</a>
+    {% endif %}
+    </ul>
+</nav>
+{% endblock %}
