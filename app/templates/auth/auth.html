@@ -5,7 +5,7 @@
     {% if g.Personne %}
         <li><span>{{ g.Personne['adresse_mail'] }}</span>
         <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
-        <li><a href="{{url_for('user.show_profile')}}">Show profile</a></li>
+        <li><a href="{{url_for('Personne.show_profile')}}">Show profile</a></li>
     {% else %}
             <h1 class="login">Se connecter </h1>
             <form method="post">

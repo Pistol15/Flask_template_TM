@@ -30,6 +30,7 @@
 .menu-flex{
     display: flex;
     justify-content: space-around;
+    color: white;
 }
 
 .flex-item{
@@ -39,7 +40,14 @@
     display: flex;
     align-items: center;
     white-space: nowrap; 
+    color: white;
 }
+
+.white{
+    color: white;
+    text-decoration: none;
+}
+
 
 .img_description{
     background-image: url('./assets/image/Nicolas_4.jpg');
@@ -116,3 +124,8 @@ margin-top: 108px;
 .portfolio{
     color: white;
 }
+
+.prestation{
+    color: white;
+}
+

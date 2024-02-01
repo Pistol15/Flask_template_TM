@@ -2,7 +2,7 @@ from flask import (Blueprint, flash, g, redirect, render_template, request, sess
 from app.utils import *
 
 # Routes /user/...
-user_bp = Blueprint('user', __name__, url_prefix='/user')
+user_bp = Blueprint('Personne', __name__, url_prefix='/Personne')
 
 # Route /user/profile accessible uniquement à un utilisateur connecté grâce au décorateur @login_required
 @user_bp.route('/profile', methods=('GET', 'POST'))
