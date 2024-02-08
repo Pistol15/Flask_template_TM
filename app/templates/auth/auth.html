@@ -9,13 +9,14 @@
     {% else %}
             <h1 class="login">Se connecter </h1>
             <form method="post">
-            <div class="adresse_mail"><label for="adresse_mail">adresse_mail</label></div>
-            <input name="adresse_mail" id="adresse_mail" required>
-            <div class="mdp"><label for="Mot_de_passe">Mot_de_passe</label></div>
-            <input type="Mot_de_passe" name="Mot_de_passe" id="Mot_de_passe" required>
-            <input type="submit" value="Log In">
+            <div class="auth" class="adresse_mail"><label for="adresse_mail">adresse_mail</label></div></br>
+            <div class="auth" class="input"><input name="adresse_mail" id="adresse_mail" required></div>
+            </br>
+            <div class="auth" class="mdp"><label for="Mot_de_passe">Mot_de_passe</label></div>
+            <div class="auth" class="input"><input type="Mot_de_passe" name="Mot_de_passe" id="Mot_de_passe" required></div>
+            <div class="auth" class="input"><input type="submit" value="Log In"></div>
             </form>
-        <li><a href="{{ url_for('auth.register') }}">Register</a>
+        <li><div class="auth"><a href="{{ url_for('auth.register') }}">Register</a></div>
     {% endif %}
     </ul>
 </nav>

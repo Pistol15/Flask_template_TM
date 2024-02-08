@@ -24,8 +24,7 @@ def register():
         Prenom = request.form['Prenom']
         date_de_naissance = request.form['date_de_naissance']
         no_de_telephone = request.form['no_de_telephone']
-        Personne_ID = 0
-        Personne_ID +=1
+
 
         # On récupère la base de donnée
         db = get_db()
@@ -34,7 +33,7 @@ def register():
         # on essaie d'insérer l'utilisateur dans la base de données
         if adresse_mail and Mot_de_passe and Nom and Prenom and date_de_naissance and no_de_telephone:
             try:
-                db.execute("INSERT INTO Personne (Personne_ID, adresse_mail, Mot_de_passe, Nom, Prenom, date_de_naissance, no_de_telephone) VALUES (?, ?, ?, ?, ?, ?, ?)",(Personne_ID , adresse_mail, generate_password_hash(Mot_de_passe), Nom, Prenom, date_de_naissance, no_de_telephone))
+                db.execute("INSERT INTO Personne (adresse_mail, Mot_de_passe, Nom, Prenom, date_de_naissance, no_de_telephone) VALUES (?, ?, ?, ?, ?, ?)",(adresse_mail, generate_password_hash(Mot_de_passe), Nom, Prenom, date_de_naissance, no_de_telephone))
                 # db.commit() permet de valider une modification de la base de données
                 db.commit()
             except db.IntegrityError:
@@ -91,7 +90,7 @@ def login():
         else:
             # En cas d'erreur, on ajoute l'erreur dans la session et on redirige l'utilisateur vers le formulaire de login
             flash(error)
-            return redirect(url_for("auth.login"))
+            return redirect(url_for("auth.auth"))
     else:
         return render_template('auth/auth.html')
 

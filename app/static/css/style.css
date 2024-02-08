@@ -5,6 +5,7 @@
 
 *{
     background-color: black;
+    color: white;
     font-family:"Inter", sans-serif;
     margin: 0px;
     padding: 0px;
@@ -129,3 +130,10 @@ margin-top: 108px;
     color: white;
 }
 
+.auth{
+    text-align: center;
+}
+
+.input{
+    color: white;
+}
