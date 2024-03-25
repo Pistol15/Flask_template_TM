@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<a href="{{url_for('home.landing_page')}}"><div class="logo"></div></a>
+            <h1 class="menu">
+                <div class="menu-flex">
+                    <div class="flex-item" class="fi1"><a class="white" href="{{url_for('home.landing_page')}}">Accueil</a></div>
+                    <div class="flex-item" class="fi2"><a class="white" href="{{url_for('portfolio.portfolio')}}">Portfolio</a></div>
+                    <div class="flex-item" class="fi3"><a class="white" href="{{url_for('prestation.prestation')}}">Prestation</a></div>
+                    <div class="flex-item" class="fi5"><a class="white" href="{{ url_for('auth.auth')}}">Mon compte</a></div>
+                    <div class="flex-item" class="fi6">Contact</div>
+                </div>
+            </h1>
+{% endblock %}
+
+{% block content%}
+A finir pour l'oral
+{% endblock %}

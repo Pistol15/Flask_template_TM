@@ -15,7 +15,51 @@
 
 {% block content%}
 
-<div class="prestation"><h1>Prestation</h1></div>
-<div class="texte">Voici les quelques préstations que je propose.</div>
+<h1><div class="prestation">Prestation</div></h1>
+<div class="texte"><div class="prestatexte">les quelques préstations que je propose.</div></div>
+<div class="lignepresta">
+    <!--Sport-->
+    <div class="itemflexsport"><a class="white" href="{{url_for('prestation.Sport')}}">
+        <div class="midpresta">
+            <div class="textepresta">Sport</div>
+        </div>
+    </a></div>
+</div>
+<div class="lignepresta">
+    <!--Anniversaire-->
+    <div class="itemflexanniv"><a class="white" href="{{url_for('prestation.anniversaire')}}">
+        <div class="midpresta">
+            <div class="textepresta">Anniversaire</div>
+        </div>
+    </div></a>
+</div>
+<div class="lignepresta"><a class="white" href="{{url_for('prestation.animaux')}}">
+    <!--Animaux-->
+    <div class="itemflexanimaux">
+        <div class="midpresta">
+            <div class="textepresta">Animaux</div>
+        </div>
+    </div></a>
+</div>
+<div class="lignepresta"><a class="white" href="{{url_for('prestation.portrait')}}">   
+    <!--Portrait-->
+    <div class="itemflexportrait">
+        <div class="midpresta">
+            <div class="textepresta">Portrait</div>
+        </div>
+    </div></a> 
+</div>
+<div class="lignepresta">    
+    <!--Concert de fanfare-->
+    <div class="itemflexconcert"><a class="white" href="{{url_for('prestation.concert')}}">
+        <div class="midpresta">
+            <div class="textepresta">Concert</div>
+        </div>
+    </div></a>
+</div>
+    
+
+<div class="bottom-page1"></div>
+<div class="bottom-page2"></div>
 
 {% endblock %}

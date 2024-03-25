@@ -7,16 +7,18 @@
         <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
         <li><a href="{{url_for('Personne.show_profile')}}">Show profile</a></li>
     {% else %}
-            <h1 class="login">Se connecter </h1>
-            <form method="post">
-            <div class="auth" class="adresse_mail"><label for="adresse_mail">adresse_mail</label></div></br>
-            <div class="auth" class="input"><input name="adresse_mail" id="adresse_mail" required></div>
-            </br>
-            <div class="auth" class="mdp"><label for="Mot_de_passe">Mot_de_passe</label></div>
-            <div class="auth" class="input"><input type="Mot_de_passe" name="Mot_de_passe" id="Mot_de_passe" required></div>
-            <div class="auth" class="input"><input type="submit" value="Log In"></div>
-            </form>
-        <li><div class="auth"><a href="{{ url_for('auth.register') }}">Register</a></div>
+        <div class="overlay">
+                <h1 class="login">Se connecter </h1>
+                <form method="post" action = "{{url_for('auth.login')}}">
+                <div class="auth" class="adresse_mail"><label for="adresse_mail">adresse_mail</label></div></br>
+                <div class="auth"><input class="input" name="adresse_mail" id="adresse_mail" required></div>
+                </br>
+                <div class="auth" class="mdp"><label for="Mot_de_passe">Mot_de_passe</label></div>
+                <div class="auth"><input class="input" type="password" name="Mot_de_passe" id="Mot_de_passe" required></div>
+                <div class="auth"><div class="submit"><input class="input" type="submit" value="Log In"></div></div>
+                </form>
+                <li><div class="auth"><div class="register">Pas de compte ?<a class="register1" href="{{ url_for('auth.register') }}">Inscrivez vous</a></div></div>
+            </div>
     {% endif %}
     </ul>
 </nav>

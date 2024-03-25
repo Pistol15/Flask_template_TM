@@ -47,6 +47,7 @@
 .white{
     color: white;
     text-decoration: none;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 
@@ -120,14 +121,440 @@ margin-top: 108px;
     color: white;
     font-size: 2em;
     text-align: center;
+    margin-bottom: 20px;
 }
+
+
+
+                                                                                                        /*portfolio in*/
 
 .portfolio{
     color: white;
+    margin-left: 195px;
 }
+
+.portfoliotexte{
+    margin-bottom: 50px;
+}
+
+.ligne{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.item-flex{
+    width: 375px;
+    height: 375px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; 
+    color: white;
+    background-image: url('./assets/image/bois1.jpg');
+}
+
+.item1a{
+    background-image: url('./assets/image/house_sparrow_1.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+
+}
+
+.item2a{
+    background-image: url('./assets/image/house_sparrow_4.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item3a{
+    background-image: url('./assets/image/Vanil_d_Ecri_6.png');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item4a{
+    background-image: url('./assets/image/Vanil_d_Ecri_3.png');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item1b{
+    background-image: url('./assets/image/Riviere_1.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item2b{
+    background-image: url('./assets/image/landscapes_3.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item3b{
+    background-image: url('./assets/image/aareschlucht_3.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item4b{
+    background-image: url('./assets/image/Lac_des_Moiries_1.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item1c{
+    background-image: url('./assets/image/Lotus_1.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item2c{
+    background-image: url('./assets/image/IMG_20210710_153754_161.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item3c{
+    background-image: url('./assets/image/vélo_2.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item4c{
+    background-image: url('./assets/image/gorge_de_la_Jogne_4.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+                                                                                                        /*portfolio out*/
+
+
+
+                                                                                                        /*prestation in*/
 
 .prestation{
     color: white;
+    margin-left: 195px;
+}
+
+.prestatexte{
+    margin-bottom: 50px;
+    
+}
+
+.lignepresta{
+    display: flex;
+    justify-content: space-around;
+}
+
+.itemflexsport{
+    width: 1770px;
+    height: 400px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background-image: url('./assets/image/M-F_2-6.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.itemflexanniv{
+    width: 1770px;
+    height: 400px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background-image: url('./assets/image/9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.itemflexanimaux{
+    width: 1770px;
+    height: 400px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background-image: url('./assets/image/Oural_1.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.itemflexportrait{
+    width: 1770px;
+    height: 400px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background-image: url('./assets/image/Julie_2.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.itemflexconcert{
+    width: 1770px;
+    height: 400px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    background-image: url('./assets/image/IMG-20240324-WA0009.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.midpresta{
+    width: 1548px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-left: 6.25%;
+    background-color: rgba(255, 255, 255, 0.756);
+}
+
+.textepresta{
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    font-size: 4em;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+                                                                                                        /*prestation out*/
+
+
+
+                                                                                                        /*prestation sport in*/
+
+
+.item1a1{
+    background-image: url('./assets/image/M-F_2-2.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item2a1{
+    background-image: url('./assets/image/M-F_2-3.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item3a1{
+    background-image: url('./assets/image/M-F_2-5.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item1b1{
+    background-image: url('./assets/image/M-F_2-6-2.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item2b1{
+    background-image: url('./assets/image/M-F_2-7.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item1c1{
+    background-image: url('./assets/image/M-F_2.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item2c1{
+    background-image: url('./assets/image/M-F_3.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+                                                                                                        /*prestation sport out*/
+
+
+
+                                                                                                        /*prestation anniversaire in*/
+
+.item1a2{
+    background-image: url('./assets/image/1.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item2a2{
+    background-image: url('./assets/image/2.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item3a2{
+    background-image: url('./assets/image/3.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item1b2{
+    background-image: url('./assets/image/4.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item2b2{
+    background-image: url('./assets/image/5.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item3b2{
+    background-image: url('./assets/image/6.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item1c2{
+    background-image: url('./assets/image/7.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item2c2{
+    background-image: url('./assets/image/8.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item1d2{
+    background-image: url('./assets/image/9.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
+}
+
+.item2d2{
+    background-image: url('./assets/image/10.jpg');
+    height: 340px;
+    width: 340px;
+    margin:17.5px;
+    align-items: center;
+    white-space: nowrap;
+    background-size: cover;
 }
 
 .auth{
@@ -136,4 +563,21 @@ margin-top: 108px;
 
 .input{
     color: white;
+    background-image: url('./assets/image/wooden-wall-scratched-material-background-texture-concept.jpg');
+    width: 250px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.submit{
+    margin-top: 75px;
+}
+
+.register{
+    margin-top: 75px;
+}
+
+.register1{
+    margin-left: 20px;
 }
