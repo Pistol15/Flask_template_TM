@@ -9,6 +9,8 @@ from app.views.auth import auth_bp
 from app.views.user import user_bp
 from app.views.portfolio import portfolio_bp
 from app.views.prestation import prestation_bp
+from app.views.galerie import galerie_bp
+
 
 # Fonction automatiquement appelée par le framework Flask lors de l'exécution de la commande python -m flask run permettant de lancer le projet
 # La fonction retourne une instance de l'application créée
@@ -20,12 +22,16 @@ def create_app():
     # Chargement des variables de configuration stockées dans le fichier config.py
     app.config.from_pyfile(os.path.join(os.path.dirname(__file__), "config.py"))
 
+    app.config['UPLOAD_FOLDER'] = 'C:/Users/nicol/OneDrive/TM/Flask_template_TM/app/Galeries'
+
+
     # Enreigstrement des blueprints de l'application.
     app.register_blueprint(home_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(user_bp)
     app.register_blueprint(portfolio_bp)
     app.register_blueprint(prestation_bp)
+    app.register_blueprint(galerie_bp)
 
     # On retourne l'instance de l'application Flask
     return app

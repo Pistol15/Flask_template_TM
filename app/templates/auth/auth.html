@@ -6,6 +6,7 @@
         <li><span>{{ g.Personne['adresse_mail'] }}</span>
         <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
         <li><a href="{{url_for('Personne.show_profile')}}">Show profile</a></li>
+        <li><a href="{{url_for('galerie.show_galeries')}}">Show galerie</a></li>
     {% else %}
         <div class="overlay">
                 <h1 class="login">Se connecter </h1>

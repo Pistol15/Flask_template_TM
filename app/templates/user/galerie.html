@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="texte">Voici vos galeries</div>
+{% endblock %}
+
+{% block content %}
+<div class="texte">
+    {% for file in file_contents %}
+        <h3>{{ file.path }}</h3>
+        <pre>{{ file.content }}</pre>
+    {% endfor %}
+</div>
+{% endblock %}
